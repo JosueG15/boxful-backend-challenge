@@ -1,16 +1,16 @@
-# Nest.js Email JSON Extractor
+# Gestor de Órdenes en Nest.js
 
-This repository is home to a Nest.js project designed to exhibit the functionality of extracting JSON data from various sources within an email. The core mechanism is built around the `mail-parser` library, which is harnessed to parse the content of email files.
+Este repositorio aloja un proyecto Nest.js diseñado para gestionar órdenes recibidas a través de una solicitud POST, imprimir los detalles de la orden en formato de tabla y devolver la orden con un identificador aleatorio generado.
 
-## Features
+## Funcionalidades
 
 The project establishes a controller with a dedicated endpoint that accepts the URL or the path of an email file as a parameter. This endpoint is crafted to respond with the JSON data extracted from the email in the following scenarios:
 
-1. **JSON File Attachment**: When the email houses a JSON file as an attachment, the endpoint will extract and respond with the JSON data from the attachment.
+1. **Recibir Orden**: El controlador acepta una solicitud POST que incluye los detalles de una orden en formato JSON.
 
-2. **JSON Link in Email Body**: Should the email body encase a direct link to a JSON file, the endpoint will pursue the link, retrieve the JSON file, and respond with the JSON data.
+2. **Imprimir Orden**: Los detalles de la orden se imprimen en formato de tabla para su visualización clara y organizada.
 
-3. **Webpage Link in Email Body**: If the email body embeds a link to a webpage, and that webpage in turn encompasses a link to a JSON file, the endpoint will trail the link to the webpage, extract the link to the JSON file, retrieve the JSON file, and respond with the JSON data.
+3. **Generar Identificador Aleatorio**: Se genera un identificador aleatorio para la orden recibida y se incluye en la respuesta devuelta al cliente.
 
 ## Getting Started
 
@@ -19,8 +19,8 @@ To get started with this project, follow these steps:
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/josueg15/nestjs-email-json-extractor.git
-   cd nestjs-email-json-extractor
+   git clone https://github.com/JosueG15/boxful-backend-challenge.git
+   cd boxful-backend-challenge
    ```
 
 2. **Install Dependencies**:
